@@ -333,3 +333,21 @@ object_get_class_name(GObject *object)
 {
 	return G_OBJECT_CLASS_NAME(G_OBJECT_GET_CLASS(object));
 }
+
+static GtkTextView *
+toGtkTextView(void *p)
+{
+    return (GTK_TEXT_VIEW(p));
+}
+
+static GtkTextTagTable *
+toGtkTextTagTable(void *p)
+{
+    return (GTK_TEXT_TAG_TABLE(p));
+}
+
+static GtkTextBuffer *
+toGtkTextBuffer(void *p)
+{
+    return (GTK_TEXT_BUFFER(p));
+}
