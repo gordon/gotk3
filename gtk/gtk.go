@@ -4733,6 +4733,11 @@ func (v *TextView) SetBuffer(buffer *TextBuffer) {
 	C.gtk_text_view_set_buffer(v.Native(), buffer.Native())
 }
 
+// SetEditable() is a wrapper around gtk_text_view_set_editable().
+func (v *TextView) SetEditable(editable bool) {
+	C.gtk_text_view_set_editable(v.Native(), gbool(editable))
+}
+
 /*
  * GtkTextTagTable
  */
